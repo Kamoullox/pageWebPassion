@@ -1,0 +1,131 @@
+* {
+    box-sizing: border-box;
+}
+
+.slider {
+    width: 35vh;
+    text-align: center;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+
+    /*
+    scroll-snap-points-x: repeat(300px);
+    scroll-snap-type: mandatory;
+    */
+}
+
+.slides::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+.slides::-webkit-scrollbar-thumb {
+    background: black;
+    border-radius: 10px;
+}
+
+.slides::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.slides>div {
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    /* width: 300px;
+    height: 300px; */
+    margin-right: 50px;
+    border-radius: 10px;
+    background: #eee;
+    transform-origin: center center;
+    transform: scale(1);
+    transition: transform 0.5s;
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+}
+
+/* .slides > div:target { */
+/*   transform: scale(0.8); */
+/* } */
+
+
+img {
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.carousel-index{
+    margin-top: 25px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.carousel-index>a {
+    display: inline-flex;
+    /* width: 1.5rem;
+    height: 1.5rem; */
+    /* background: white; */
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20%;
+    margin: 0 0 0.5rem 0;
+    position: relative;
+    color: white;
+    margin-bottom: 5%;
+}
+
+.carousel-index>a:active {
+    top: 1px;
+}
+
+.carousel>a:focus {
+    background: #000;
+}
+
+a.anchor {
+    display: block;
+    position: relative;
+    top: -250px;
+    visibility: hidden; 
+}
+
+.carousel-index>a:before {
+    content:"";
+    display:block;
+    height:90px; /* fixed header height*/
+    margin:-90px 0 0; /* negative fixed header height */
+    }
+
+/* Don't need button navigation */
+/* @supports (scroll-snap-type) {
+    .slider>a {
+        display: none;
+    }
+} */

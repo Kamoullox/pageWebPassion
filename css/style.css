@@ -1,5 +1,6 @@
 body, html {
     margin: 0;
+    scroll-behavior:smooth;
 }
 
 /* -------------------------------------- */
@@ -9,6 +10,7 @@ body, html {
     width: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 2px;
+    z-index: 100;
 }
 
 .menu-list {
@@ -27,7 +29,7 @@ body, html {
 /* -------------------------------------- */
 .bg {
     /* The image used */
-    background-image: url("./src/hl.jpg");
+    background-image: url("../src/hl.jpg");
 
     /* Full height */
     height: 100vh;
@@ -37,6 +39,18 @@ body, html {
     ;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+
+
+.bg:before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 30%;
+    background: linear-gradient(to top, RGB(49, 57, 67), transparent);
+    z-index: 10000;
 }
 
 /* -------------------------------------- */
@@ -87,19 +101,22 @@ form {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 45vh;
+    width: 35vh;
+    background: RGB(49, 57, 67);
 }
 
 .box {
     position: relative;
-    width: 300px;
-    height: 400px;
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.5);
     overflow: hidden;
     border-radius: 20px;
-    margin-top: 10px;
+    /* margin-top: 10px; */
 }
 
 .box img {
@@ -149,9 +166,6 @@ form {
     }
 }
 
-
-
-
 /* -------------------------------------- */
 
 
@@ -168,10 +182,12 @@ form {
         flex-direction: row;
         justify-content: center;
         align-items: center;
+        background-color: RGB(49, 57, 67);
+
     }
 
-    .box{
+    /* .box{
         margin-right: 15px;
-    }
+    } */
 
 }
