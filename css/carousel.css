@@ -101,6 +101,10 @@ img {
     margin-bottom: 5%;
 }
 
+.carousel-index.white>a {
+    color: RGB(49, 57, 67);
+}
+
 .carousel-index>a:active {
     top: 1px;
 }

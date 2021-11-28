@@ -51,6 +51,10 @@ body, html {
     z-index: 10000;
 }
 
+.bg.white:before{
+    background: linear-gradient(to top, #dfe1dd, transparent);
+}
+
 #logo{
     position: relative;
     top: 51%;
@@ -79,6 +83,10 @@ body, html {
     background-color: RGB(49, 57, 67);
 }
 
+.full-width.white{
+    background-color: #dfe1dd;
+}
+
 .margin-constraint {
     /*On indique tout simplement une marge*/
     margin-left: 20px;
@@ -98,6 +106,10 @@ body, html {
     display: flex;
     flex-direction: column;
 }
+#description-bloc.white{
+    color:  RGB(49, 57, 67);
+}
+
 
 #description-bloc p {
     font-family: Ridley Grotesk W05 Regular, sans-serif
@@ -125,6 +137,10 @@ form {
     height: 45vh;
     width: 35vh;
     background: RGB(49, 57, 67);
+}
+
+.boxesList-white {
+    background: #dfe1dd;
 }
 
 .box {
@@ -162,6 +178,10 @@ form {
     inset: 4px;
     background: RGB(49, 57, 67);
     border-radius: 16px;
+}
+
+.box.white:after {
+    background: #dfe1dd;
 }
 
 .slytherin:before {
@@ -204,7 +224,10 @@ form {
         justify-content: center;
         align-items: center;
         background-color: RGB(49, 57, 67);
+    }
 
+    .boxesList.white {
+        background-color: #dfe1dd;
     }
 
     /* .box{
