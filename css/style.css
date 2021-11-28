@@ -41,8 +41,6 @@ body, html {
     background-size: cover;
 }
 
-
-
 .bg:before{
     content: '';
     position: absolute;
@@ -51,6 +49,29 @@ body, html {
     height: 30%;
     background: linear-gradient(to top, RGB(49, 57, 67), transparent);
     z-index: 10000;
+}
+
+#logo{
+    position: relative;
+    top: 51%;
+    left: 42%;
+    width: 54%;
+    height: 10vh;
+}
+
+#logo img{
+    width: 100%;
+    height: auto;
+}
+
+@media only screen and (min-width: 773px) {
+    #logo{
+        position: relative;
+        top: 50vh;
+        left: 40vw;
+        width: 430px;
+        height: 10vh;
+    }
 }
 
 /* -------------------------------------- */
