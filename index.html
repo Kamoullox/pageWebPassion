@@ -5,9 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src = "index.js" defer></script>
+    <script src="index.js" defer></script>
     <link href="css/style.css" rel="stylesheet" type="text/css">
     <link href="css/carousel.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.cdnfonts.com/css/harry-potter" rel="stylesheet">
+
     <title>Hogwarts Legacy</title>
 </head>
 
@@ -41,86 +43,18 @@
             <div id="logo">
                 <img src="src/logo.webp" alt="Logo Hogwarts Legacy">
             </div>
-           
+
         </div>
 
-
     </header>
-
-
-
 
     <div class="full-width">
         <div class="margin-constraint">
             <div class="useful-width">
 
-
-                <!-- Carrousel -->
-                <div class="carousel">
-                    <div class="carousel-index">
-                        <a href="#slide-1">Serpentard</a>
-                        <a href="#slide-2">Gryffondor</a>
-                        <a href="#slide-3">Serdaigle</a>
-                        <a href="#slide-4">Pouffsoufle</a>
-                    </div>
-                  
-
-                    <div class="slider">
-                        <div class="slides">
-                            <div id="slide-1">
-                                <a class="anchor" id="top"></a>
-                                <div class="boxesList">
-                                    <div class="box slytherin">
-                                        <img src="src/logo-slytherin.png" alt="Logo de Serpentard">
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="slide-2">
-                                <a class="anchor" id="top"></a>
-                                <div class="boxesList">
-                                    <div class="box gryfindor">
-                                        <img src="src/logo-gryfindor.png" alt="Logo de Serpentard">
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="slide-3">
-                                <a class="anchor3" id="top"></a>
-                                <div class="boxesList">
-                                    <div class="box ravenclaw">
-                                        <img src="src/logo-ravenclaw.png" alt="Logo de Serpentard">
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="slide-4">
-                                <a class="anchor" id="top"></a>
-                                <div class="boxesList">
-                                    <div class="box hufflepuff">
-                                        <img src="src/logo-hufflepuff.png" alt="Logo de Serpentard">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
+                <div class="title">
+                    <h2>Replongez dans l'univers d'Harry Potter</h2>
                 </div>
-                
-
-                <!-- Cards -->
-                <!-- <div class="boxesList">
-                    <div class="box slytherin">
-                        <img src="src/logo-slytherin.png" alt="Logo de Serpentard">
-                    </div>
-                    <div class="box gryfindor">
-                        <img src="src/logo-gryfindor.png" alt="Logo de Serpentard">
-                    </div>
-                    <div class="box ravenclaw">
-                        <img src="src/logo-ravenclaw.png" alt="Logo de Serpentard">
-                    </div>
-                    <div class="box hufflepuff">
-                        <img src="src/logo-hufflepuff.png" alt="Logo de Serpentard">
-                    </div>
-                </div> -->
-
 
                 <div id="description-bloc">
                     <div class="bloc">
@@ -170,40 +104,69 @@
                     </div>
                 </div>
 
+
+                <!-- Carrousel -->
+                <div class="carousel-title"><h3>Choisissez votre maison</h3></div>
+                <div class="carousel">
+                    <div class="carousel-index">
+                        <a href="#slide-1">Serpentard</a>
+                        <a href="#slide-2">Gryffondor</a>
+                        <a href="#slide-3">Serdaigle</a>
+                        <a href="#slide-4">Pouffsoufle</a>
+                    </div>
+                    <div class="slider">
+                        <div class="slides">
+                            <div id="slide-1">
+                                <a class="anchor" id="top"></a>
+                                <div class="boxesList">
+                                    <div class="box slytherin">
+                                        <img src="src/logo-slytherin.png" alt="Logo de Serpentard">
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="slide-2">
+                                <a class="anchor" id="top"></a>
+                                <div class="boxesList">
+                                    <div class="box gryfindor">
+                                        <img src="src/logo-gryfindor.png" alt="Logo de Serpentard">
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="slide-3">
+                                <a class="anchor3" id="top"></a>
+                                <div class="boxesList">
+                                    <div class="box ravenclaw">
+                                        <img src="src/logo-ravenclaw.png" alt="Logo de Serpentard">
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="slide-4">
+                                <a class="anchor" id="top"></a>
+                                <div class="boxesList">
+                                    <div class="box hufflepuff">
+                                        <img src="src/logo-hufflepuff.png" alt="Logo de Serpentard">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- formulaire -->
                 <form action="index.html">
+                    <h2>Newsletter</h2>
                     <p>
-                        <label for="nom">Votre nom :</label>
-                        <input type="text" name="nom" id="nom" placeholder="Ex : Kamel" />
+                        <label for="nom">Nom de sorcier</label>
+                        <input type="text" name="nom" id="nom" placeholder="Kamoullox" />
                     </p>
                     <p>
-                        <label for="mail">Votre email :</label>
+                        <label for="mail">Email</label>
                         <input type="email" name="mail" id="mail" placeholder="foo@bar.com" />
                     </p>
                     <input type="submit" value="Envoyer" />
 
                 </form>
 
-
-
-
-
-                <!-- <footer>
-                    <div id="platform-bloc">
-                        <div>
-                            <img src="src/logo-playstation.jpg" alt="Logo Wizarding World" width="50" height="50"
-                                id="image-bloc__logo" />
-                        </div>
-                        <div>
-                            <img src="src/logo-xbox.png" alt="Logo Wizarding World" width="50" height="50"
-                                id="image-bloc__logo" />
-                        </div>
-                        <div>
-                            <img src="src/logo-pc.jpg" alt="Logo Wizarding World" width="50" height="50"
-                                id="image-bloc__logo" />
-                        </div>
-                    </div>
-                </footer> -->
             </div>
         </div>
     </div>

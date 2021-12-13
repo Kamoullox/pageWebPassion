@@ -13,5 +13,4 @@ chk.addEventListener('change', () => {
 	boxesList.classList.toggle('white');
 	text.classList.toggle('white');
     carouselLink.classList.toggle('white');
-    
 });
