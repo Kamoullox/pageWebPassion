@@ -1,3 +1,12 @@
+:root{
+    --dark: #313943;
+    --accentuation-text: #b79b5a;
+    --normale-text: #fff4e2;
+    --white: #dfe1dd;
+}
+
+
+
 body, html {
     margin: 0;
     scroll-behavior: smooth;
@@ -8,13 +17,13 @@ body, html {
 
 
 /* -------------------------------------- */
-.menu {
+.menu { 
     height: min-content;
     position: fixed;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 2px;
-    z-index: 1000000;
+    z-index: 3;
 }
 
 .menu-list {
@@ -26,7 +35,7 @@ body, html {
 }
 
 .menu-list a {
-    color: #fff4e2;
+    color: var(--normale-text);
     text-decoration: none;
 }
 
@@ -40,7 +49,6 @@ body, html {
 
     /* Center and scale the image nicely */
     background-position: 20% 70%;
-    ;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -51,12 +59,12 @@ body, html {
     bottom: 0;
     width: 100%;
     height: 30%;
-    background: linear-gradient(to top, RGB(49, 57, 67), transparent);
-    z-index: 10000;
+    background: linear-gradient(to top, #161c1c, transparent);
+    z-index: 1;
 }
 
 .bg.white:before {
-    background: linear-gradient(to top, #dfe1dd, transparent);
+    background: linear-gradient(to top, var(--white), transparent);
 }
 
 #logo {
@@ -84,11 +92,29 @@ body, html {
 
 /* -------------------------------------- */
 .full-width {
-    background-color: RGB(49, 57, 67);
+    background-color: var(--dark);
+    background-image: url("../src/bg-bottom.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 83% -100%;
+
+    position: relative;
 }
 
+.full-width:before {
+    position: relative;
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 12%;
+    background: linear-gradient(to top, transparent, #161c1c);
+    z-index: 0;
+}
+
+
 .full-width.white {
-    background-color: #dfe1dd;
+    background-color: var(--white);
 }
 
 .margin-constraint {
@@ -99,20 +125,22 @@ body, html {
 
 .useful-width {
     /*On règle ensuite la largeur utile puis on centre*/
+    position: relative;
     max-width: 1080px;
     margin-left: auto;
     margin-right: auto;
+    z-index: 2;
 }
 
 /* -------------------------------------- */
 #description-bloc {
-    color: #fff4e2;
+    color: var(--normale-text);
     display: flex;
     flex-direction: column;
 }
 
 #description-bloc.white {
-    color: RGB(49, 57, 67);
+    color: var(--dark);
 }
 
 
@@ -141,7 +169,7 @@ form {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 4vh;
+    margin-top: 6vh;
     max-width: 320px;
 }
 
@@ -155,7 +183,7 @@ form h2{
 
 form label{
     display: block;
-    color: #c89f16;
+    color: var(--accentuation-text);
     margin-bottom: 1vh;
 }
 
@@ -166,10 +194,10 @@ form input{
     outline: none;
     border-radius: 40px;
     padding: 5px 15px;
-    color: white;
+    color: var(--white);
     font-size: 1em;
-    color: #fff4e2;
-    background: RGB(49, 57, 67);
+    color: var(--normale-text);
+    background: var(--dark);
     box-shadow: inset -3px -3px 6px rgba(255, 255, 255, 0.1),
                 inset 3px 3px 6px rgba(0, 0, 0, 0.8);
 }
@@ -196,11 +224,11 @@ form input[type="submit"]:active
     align-items: center;
     height: 45vh;
     width: 35vh;
-    background: RGB(49, 57, 67);
+    background: tran;
 }
 
 .boxesList-white {
-    background: #dfe1dd;
+    background: var(--white);
 }
 
 .box {
@@ -218,7 +246,7 @@ form input[type="submit"]:active
 
 .box img {
     position: relative;
-    z-index: 10;
+    z-index: 1;
     width: 80%;
     height: auto;
 }
@@ -236,12 +264,12 @@ form input[type="submit"]:active
     content: '';
     position: absolute;
     inset: 4px;
-    background: RGB(49, 57, 67);
+    background: var(--dark);
     border-radius: 16px;
 }
 
 .box.white:after {
-    background: #dfe1dd;
+    background: var(--white);
 }
 
 .slytherin:before {
@@ -273,31 +301,6 @@ form input[type="submit"]:active
 /* -------------------------------------- */
 
 
-@media only screen and (min-width: 768px) {
-    #description-bloc {
-        flex-direction: row;
-    }
-
-    .bloc {
-        width: 33%;
-    }
-
-    .boxesList {
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        background-color: RGB(49, 57, 67);
-    }
-
-    .boxesList.white {
-        background-color: #dfe1dd;
-    }
-
-    /* .box{
-        margin-right: 15px;
-    } */
-
-}
 
 .title {
     display: flex;
@@ -306,7 +309,7 @@ form input[type="submit"]:active
 }
 
 .title h2 {
-    color: RGB(160, 133, 69);
+    color: var(--accentuation-text);
     font-size: 1.2em;
     margin: 0;
     padding-top: 4vh;
@@ -320,9 +323,46 @@ form input[type="submit"]:active
 }
 
 .carousel-title h3 {
-    color: RGB(160, 133, 69);
+    color: var(--accentuation-text);
     font-size: 1.2em;
     margin: 0;
     padding-top: 4vh;
     font-family: 'Harry Potter', sans-serif;
+}
+
+
+@media only screen and (min-width: 768px) {
+    #description-bloc {
+        flex-direction: row;
+    }
+
+    .bloc {
+        width: 33%;
+    }
+
+    .boxesList {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--dark);
+    }
+
+    .boxesList.white {
+        background-color: var(--white);
+    }
+
+    .title h2 { 
+        font-size: 2em;
+    }
+
+
+    .carousel-title h3 {
+        font-size: 2em;
+    }
+
+
+    /* .box{
+        margin-right: 15px;
+    } */
+
 }
